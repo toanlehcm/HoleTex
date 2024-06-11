@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from './exampleFunctional.module.scss'
 
 function ExampleFunctional(props) {
   const [count, setCount] = useState(0)
@@ -20,12 +19,6 @@ function ExampleFunctional(props) {
     <div>
       <div>count {count}</div>
       <button onClick={handleClick}> click me</button>
-
-      <div className={styles.flex_container} >
-        <div className={`${styles.box} ${styles.box_1}`} ></div>
-        <div className={`${styles.box} ${styles.box_2}`} ></div>
-        <div className={`${styles.box} ${styles.box_3}`} ></div>
-      </div>
     </div>
   );
 }

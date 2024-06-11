@@ -1,17 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import ExampleFunctional from './conponents/ExampleFunctional';
-import LessonHTMLAndCSS from './lesson/htmlcss';
-import LessonCSSGrid from './lesson/cssGrid';
-import LessonPositionCSS from './lesson/positionCSS';
+import CookiesLocalSession from './lesson/CookiesLocalSession';
 
 function App() {
   return (
     <div className="App">
-      {/* <ExampleFunctional /> */}
-      {/* <LessonHTMLAndCSS /> */}
-      {/* <LessonCSSGrid /> */}
-      <LessonPositionCSS />
+      <CookiesLocalSession />
     </div>
   );
 }

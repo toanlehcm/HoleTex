@@ -1,10 +1,10 @@
 import './App.css';
-import CookiesLocalSession from './lesson/CookiesLocalSession';
+import AsyncJs from './lesson/AsyncJs';
 
 function App() {
   return (
     <div className="App">
-      <CookiesLocalSession />
+      <AsyncJs />
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import './App.css';
-import AsyncJs from './lesson/AsyncJs';
+import ES6JavaScript from './lesson/ES6JavaScript';
 
 function App() {
   return (
     <div className="App">
-      <AsyncJs />
+      <ES6JavaScript />
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import './App.css';
-import LearnUseRef from './lesson/LearnUseRef';
+import LearnUseReducer from './lesson/LearnUseReducer';
 
 function App() {
   return (
     <div className="App">
-      <LearnUseRef />
+      <LearnUseReducer />
     </div>
   );
 }

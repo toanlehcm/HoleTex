@@ -1,14 +1,31 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import HOCChild from './HOCChild';
 
-function Counter() {
+// function Counter() {
+//   const [count, setCount] = useState(0)
+
+//   return (
+//     <>
+//       <div>count {count}</div>
+//       <button onClick={() => setCount(count + 1)}> click me</button>
+//     </>
+//   )
+// }
+
+function NewComponent({ children }) {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>count {count}</div>
-      <button onClick={() => setCount(count + 1)}> click me</button>
-    </>
+    <div >
+      <p> Out Count {count}</p>
+
+      <div>
+        <div>count {count}</div>
+        <button onClick={() => setCount(count + 1)}> click me</button>
+
+        {children}
+      </div>
+    </div>
   )
 }
 
@@ -21,8 +38,11 @@ function ReactMemoHOC(props) {
 
   return (
     <div >
-      <Counter />
-      <HOCChild name={name} getUser={getUser} />
+      {/* <Counter /> */}
+
+      <NewComponent>
+        <HOCChild name={name} getUser={getUser} />
+      </NewComponent>
     </div>
   );
 }

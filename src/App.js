@@ -1,10 +1,10 @@
 import './App.css';
-import ReactMemoHOC from './lesson/ReactMemoHOC';
+import LearnUseRef from './lesson/LearnUseRef';
 
 function App() {
   return (
     <div className="App">
-      <ReactMemoHOC />
+      <LearnUseRef />
     </div>
   );
 }

@@ -5,7 +5,6 @@ function NewHooksInReact18() {
   return (
     <div>
       <FormComponent />
-      <FormComponent />
     </div>
   );
 }

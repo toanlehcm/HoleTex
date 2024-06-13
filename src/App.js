@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import LearnUseMemo from './components/LearnUseMemo';
+import LearnUseCallback from './components/LearnUseCallback';
 
 function App() {
   return (
     <div className="App">
-      <LearnUseMemo />
+      <LearnUseCallback />
     </div>
   );
 }

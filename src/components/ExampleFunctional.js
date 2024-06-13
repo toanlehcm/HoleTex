@@ -8,11 +8,11 @@ function ExampleFunctional(props) {
   useEffect(() => {
     // ComponentDidMount and ComponentDidUpdate
     document.title = `${count} times`
-    console.log('useEffect-count');
+    // console.log('useEffect-count');
 
     return () => {
       // Clean-up function
-      console.log('useEffect - count - cleanup');
+      // console.log('useEffect - count - cleanup');
     }
   }, [count])
 
@@ -27,14 +27,16 @@ function ExampleFunctional(props) {
   }
 
   useEffect(() => {
-    // ComponentDidMount
+    // ComponentDidMount: Add the scroll event listener.
+    console.log('ComponentDidMount');
     document.addEventListener('scroll', handleScroll)
 
     return () => {
-      // ComponentWillUnmount
+      // ComponentWillUnmount: Remove the scroll event listener
+      console.log('ComponentWillUnmount');
       document.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, []) // The empty dependency array means this effect runs once when the component mounts and unmounts
 
   return (
     <div style={{ height: '2000px' }}>

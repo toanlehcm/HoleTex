@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useDebugValue, useEffect } from 'react';
 import { useReducerHook } from '../../hooks/useReducerHook';
 import { useFetch } from '../../hooks/useFetch';
 
@@ -55,6 +55,8 @@ function CustomHooks() {
   // }, [])
 
   const { data: users, isLoading, error } = useFetch('https://reqres.in/api/users')
+
+  useDebugValue(isLoading ? 'loading' : 'loaded')
 
   if (error) {
     return 'something wrong!'

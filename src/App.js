@@ -1,10 +1,10 @@
 import './App.css';
-import LearnUseImperativeHandle from './lesson/LearnUseImperativeHandle';
+import CustomHooks from './lesson/CustomHooks';
 
 function App() {
   return (
     <div className="App">
-      <LearnUseImperativeHandle />
+      <CustomHooks />
     </div>
   );
 }

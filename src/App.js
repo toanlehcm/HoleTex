@@ -1,10 +1,10 @@
 import './App.css';
-import LearnUseReducer from './lesson/LearnUseReducer';
+import NewHooksInReact18 from './lesson/NewHooksInReact18';
 
 function App() {
   return (
     <div className="App">
-      <LearnUseReducer />
+      <NewHooksInReact18 />
     </div>
   );
 }

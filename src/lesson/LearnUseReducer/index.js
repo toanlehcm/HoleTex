@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useRef, useState } from 'react';
+import React, { useReducer } from 'react';
 
 /**
  * ACTION: 'ADD_NEW_ITEM'

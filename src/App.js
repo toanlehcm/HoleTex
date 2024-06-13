@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import LearnUseCallback from './components/LearnUseCallback';
+import ReactMemoHOC from './lesson/ReactMemoHOC';
 
 function App() {
   return (
     <div className="App">
-      <LearnUseCallback />
+      <ReactMemoHOC />
     </div>
   );
 }

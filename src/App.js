@@ -1,10 +1,10 @@
 import './App.css';
-import ES6JavaScript from './lesson/ES6JavaScript';
+import CookiesLocalSession from './lesson/CookiesLocalSession';
 
 function App() {
   return (
     <div className="App">
-      <ES6JavaScript />
+      <CookiesLocalSession />
     </div>
   );
 }

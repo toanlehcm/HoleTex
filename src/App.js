@@ -1,10 +1,10 @@
 import './App.css';
-import NewHooksInReact18 from './lesson/NewHooksInReact18';
+import CustomHooks from './lesson/CustomHooks';
 
 function App() {
   return (
     <div className="App">
-      <NewHooksInReact18 />
+      <CustomHooks />
     </div>
   );
 }

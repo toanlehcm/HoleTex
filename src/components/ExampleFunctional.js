@@ -1,44 +1,50 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function ExampleFunctional(props) {
-  const initialValues = () => {
-    let total = 0;
-
-    for (let i = 0; i < 10; i++) {
-      total += i
-      // console.log('total', i, '--', total);
-    }
-
-    // console.log('initialValues');
-
-    return total
-  }
-
   const [count, setCount] = useState(0)
-  const [user, setUser] = useState({
-    name: 'Toan',
-    age: 30
-  })
+  const [action, setAction] = useState('user')
+  const [scrollPosition, setScrollPosition] = useState(0)
 
-  const handleClick = () => {
-    setCount((prevState) => {
-      // console.log('prevState ', prevState);
-      return prevState + 1
-    })
+  useEffect(() => {
+    // ComponentDidMount and ComponentDidUpdate
+    document.title = `${count} times`
+    console.log('useEffect-count');
 
-    setCount((prevState) => {
-      // console.log('prevState *', prevState);
-      return prevState + 1
-    })
+    return () => {
+      // Clean-up function
+      console.log('useEffect - count - cleanup');
+    }
+  }, [count])
 
-    setUser({ name: 'Toan 2' })
+  useEffect(() => {
+    fetch(`https://reqres.in/api/${action}`)
+      .then((res) => { console.log('res', res); })
+      .catch((err) => { console.log('err', err); })
+  }, [action])
+
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY)
   }
+
+  useEffect(() => {
+    // ComponentDidMount
+    document.addEventListener('scroll', handleScroll)
+
+    return () => {
+      // ComponentWillUnmount
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
-    <div>
+    <div style={{ height: '2000px' }}>
       <div>count {count}</div>
-      <button onClick={handleClick}> click me</button>
-      <p>{JSON.stringify(user)}</p>
+      <button onClick={() => setCount(count + 1)}> click me</button>
+
+      <button onClick={() => setAction('user')}> Get user</button>
+      <button onClick={() => setAction('comment')}> Get comment</button>
+
+      <p style={{ position: 'fixed', bottom: '20px', left: '20px' }}>{scrollPosition}</p>
     </div>
   );
 }

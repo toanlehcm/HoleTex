@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import ExampleFunctional from './components/ExampleFunctional';
+import LearnUseMemo from './components/LearnUseMemo';
 
 function App() {
   return (
     <div className="App">
-      <ExampleFunctional />
+      <LearnUseMemo />
     </div>
   );
 }

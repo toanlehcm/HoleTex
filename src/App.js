@@ -1,10 +1,10 @@
 import './App.css';
-import LearnUseContext from './lesson/LearnUseContext';
+import LearnUseImperativeHandle from './lesson/LearnUseImperativeHandle';
 
 function App() {
   return (
     <div className="App">
-      <LearnUseContext />
+      <LearnUseImperativeHandle />
     </div>
   );
 }

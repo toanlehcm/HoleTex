@@ -1,10 +1,10 @@
 import './App.css';
-import CustomHooks from './lesson/CustomHooks';
+import LearnUseContext from './lesson/LearnUseContext';
 
 function App() {
   return (
     <div className="App">
-      <CustomHooks />
+      <LearnUseContext />
     </div>
   );
 }

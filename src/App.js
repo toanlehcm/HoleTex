@@ -1,10 +1,10 @@
 import './App.css';
-import LiskovSubstitutionPrinciple from './lesson/LiskovSubstitutionPrinciple';
+import InterfaceSegregationPrinciple from './lesson/InterfaceSegregationPrinciple';
 
 function App() {
   return (
     <div className="App">
-      <LiskovSubstitutionPrinciple />
+      <InterfaceSegregationPrinciple />
     </div>
   );
 }

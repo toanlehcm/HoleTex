@@ -1,10 +1,10 @@
 import './App.css';
-import InterfaceSegregationPrinciple from './lesson/InterfaceSegregationPrinciple';
+import DependencyInversionPrinciple from './lesson/DependencyInversionPrinciple';
 
 function App() {
   return (
     <div className="App">
-      <InterfaceSegregationPrinciple />
+      <DependencyInversionPrinciple />
     </div>
   );
 }

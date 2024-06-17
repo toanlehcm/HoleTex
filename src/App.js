@@ -1,10 +1,10 @@
 import './App.css';
-import CustomHooks from './lesson/CustomHooks';
+import ShallowCopy from './lesson/ShallowCopy';
 
 function App() {
   return (
     <div className="App">
-      <CustomHooks />
+      <ShallowCopy />
     </div>
   );
 }

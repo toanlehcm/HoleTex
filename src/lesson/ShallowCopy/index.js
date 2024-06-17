@@ -26,11 +26,11 @@ function ShallowCopy() {
   const b = deepCopy(a);
   // const b = []
   // const b = a.map(item => item)
-  console.log('b', a, b);
+  // console.log('b', a, b);
   b[0].name = 'phuong tran'
-  console.log('b *', a, b);
-
+  // console.log('b *', a, b);
   /*-------------------------------------------*/
+
   const c = [{ id: 1, name: 'sinhVien' }]
   // console.log('c', { c });
   setTimeout(() => {
@@ -42,6 +42,22 @@ function ShallowCopy() {
     // console.log('d *', c, d);
   }, 5000)
   // console.log('----------------');
+
+  /*-------------------- Deep copy with map() -----------------------*/
+  const array1 = [{ id: 1, name: 'sinhVien' }, { id: 2, name: 'hocSinh' }];
+  // const arrayCopy1 = array1.map(item => ({ ...item, name: item.name.toUpperCase() }));
+
+  const arrayCopy1 = array1.map(item => {
+    console.log('item', item);
+    return {
+      ...item,
+      name: item.name.toUpperCase() // Correctly assign the transformed name
+    }
+  });
+
+  console.log('Original Array:', array1); // [{ id: 1, name: 'sinhVien' }, { id: 2, name: 'hocSinh' }]
+  console.log('Modified Array:', arrayCopy1, arrayCopy1 == array1, arrayCopy1 === array1); // [{ id: 1, name: 'SINHVIEN' }, { id: 2, name: 'HOCSINH' }]
+
 
   return (<div > Shallow copy </div>)
 }

@@ -48,16 +48,22 @@ function ShallowCopy() {
   // const arrayCopy1 = array1.map(item => ({ ...item, name: item.name.toUpperCase() }));
 
   const arrayCopy1 = array1.map(item => {
-    console.log('item', item);
+    // console.log('item', item);
     return {
       ...item,
       name: item.name.toUpperCase() // Correctly assign the transformed name
     }
   });
 
-  console.log('Original Array:', array1); // [{ id: 1, name: 'sinhVien' }, { id: 2, name: 'hocSinh' }]
-  console.log('Modified Array:', arrayCopy1, arrayCopy1 == array1, arrayCopy1 === array1); // [{ id: 1, name: 'SINHVIEN' }, { id: 2, name: 'HOCSINH' }]
+  // console.log('Original Array:', array1); // [{ id: 1, name: 'sinhVien' }, { id: 2, name: 'hocSinh' }]
+  // console.log('Modified Array:', arrayCopy1, arrayCopy1 == array1, arrayCopy1 === array1); // [{ id: 1, name: 'SINHVIEN' }, { id: 2, name: 'HOCSINH' }]
 
+  /*-------------------- Deep copy with filter() -----------------------*/
+  const array2 = [{ id: 1, name: 'sinhVien' }, { id: 2, name: 'hocSinh' }];
+  const arrayCopy2 = array2.filter(item => item.id !== 0);
+
+  console.log('Original Array:', array2);
+  console.log('Modified Array:', arrayCopy2, arrayCopy2 == array2, arrayCopy2 === array2);
 
   return (<div > Shallow copy </div>)
 }

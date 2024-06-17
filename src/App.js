@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       {/* <ExampleFunctional /> */}
-      {/* <LessonHTMLAndCSS /> */}
+      <LessonHTMLAndCSS />
       {/* <LessonCSSGrid /> */}
-      <LessonPositionCSS />
+      {/* <LessonPositionCSS /> */}
     </div>
   );
 }

@@ -8,6 +8,12 @@ function LessonHTMLAndCSS(props) {
         <div className={`${styles.box} ${styles.box_1}`} ></div>
         <div className={`${styles.box} ${styles.box_2}`} ></div>
         <div className={`${styles.box} ${styles.box_3}`} ></div>
+        <div className={`${styles.box} ${styles.box_1}`} ></div>
+        <div className={`${styles.box} ${styles.box_2}`} ></div>
+        <div className={`${styles.box} ${styles.box_3}`} ></div>
+        <div className={`${styles.box} ${styles.box_1}`} ></div>
+        <div className={`${styles.box} ${styles.box_2}`} ></div>
+        <div className={`${styles.box} ${styles.box_3}`} ></div>
       </div>
     </div>
   );

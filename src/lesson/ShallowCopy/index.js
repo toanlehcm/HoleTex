@@ -48,22 +48,39 @@ function ShallowCopy() {
   // const arrayCopy1 = array1.map(item => ({ ...item, name: item.name.toUpperCase() }));
 
   const arrayCopy1 = array1.map(item => {
-    // console.log('item', item);
+    // console.log('map() item', item);
     return {
       ...item,
       name: item.name.toUpperCase() // Correctly assign the transformed name
     }
   });
 
-  // console.log('Original Array:', array1); // [{ id: 1, name: 'sinhVien' }, { id: 2, name: 'hocSinh' }]
-  // console.log('Modified Array:', arrayCopy1, arrayCopy1 == array1, arrayCopy1 === array1); // [{ id: 1, name: 'SINHVIEN' }, { id: 2, name: 'HOCSINH' }]
+  // console.log('map() Original Array:', array1); // [{ id: 1, name: 'sinhVien' }, { id: 2, name: 'hocSinh' }]
+  // console.log('map() Modified Array:', arrayCopy1, arrayCopy1 == array1, arrayCopy1 === array1); // [{ id: 1, name: 'SINHVIEN' }, { id: 2, name: 'HOCSINH' }]
 
   /*-------------------- Deep copy with filter() -----------------------*/
   const array2 = [{ id: 1, name: 'sinhVien' }, { id: 2, name: 'hocSinh' }];
   const arrayCopy2 = array2.filter(item => item.id !== 0);
 
-  console.log('Original Array:', array2);
-  console.log('Modified Array:', arrayCopy2, arrayCopy2 == array2, arrayCopy2 === array2);
+  // console.log('filter() Original Array:', array2);
+  // console.log('filter() Modified Array:', arrayCopy2, arrayCopy2 == array2, arrayCopy2 === array2);
+
+  /*-------------------- Deep copy with find() -----------------------*/
+  const array3 = [{ id: 1, name: 'sinhVien' }, { id: 2, name: 'hocSinh' }];
+  const arrayCopy3 = array3.find(item => item.id !== 0);
+
+  console.log('find() Original Array:', array3);
+  console.log('find() Modified Array 3:', arrayCopy3, arrayCopy3 == array3, arrayCopy3 === array3);
+
+  const arrayCopy3_2 = array3.find(item => {
+    console.log('find() item', item);
+    return {
+      ...item,
+      name: item.name.toUpperCase() // Correctly assign the transformed name
+    }
+  });
+
+  console.log('find() Modified Array 3_2:', arrayCopy3_2, arrayCopy3_2 == array3, arrayCopy3_2 === array3);
 
   return (<div > Shallow copy </div>)
 }

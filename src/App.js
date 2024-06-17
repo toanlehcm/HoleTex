@@ -1,10 +1,10 @@
 import './App.css';
-import ShallowCopy from './lesson/ShallowCopy';
+import LiskovSubstitutionPrinciple from './lesson/LiskovSubstitutionPrinciple';
 
 function App() {
   return (
     <div className="App">
-      <ShallowCopy />
+      <LiskovSubstitutionPrinciple />
     </div>
   );
 }

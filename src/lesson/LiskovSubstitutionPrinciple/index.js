@@ -1,6 +1,8 @@
 import React from 'react';
 import Notification from './Notification';
 import SuccessNotification from './SuccessNotification';
+import BaseButton from './BaseButton';
+import IconButton from './IconButton';
 
 class FormValidator extends React.Component {
   validate() {
@@ -28,11 +30,14 @@ class EmailValidator extends FormValidator {
 function LiskovSubstitutionPrinciple(props) {
   return (
     <>
-      <FormValidator value="test" />
-      <EmailValidator value="test@example.com" />
+      {/* <FormValidator value="test" /> */}
+      {/* <EmailValidator value="test@example.com" /> */}
 
-      <Notification message="This is a basic notification" />
-      <SuccessNotification message="This is a success notification" />
+      {/* <Notification message="This is a basic notification" /> */}
+      {/* <SuccessNotification message="This is a success notification" /> */}
+
+      <BaseButton label="Click Me" onClick={() => alert('Button clicked')} />
+      <IconButton label="Click Me Icon" onClick={() => alert('IconButton clicked')} icon="favicon.ico" />
     </>
   );
 }

@@ -1,30 +1,26 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import TodoList from './TodoList';
 import styles from './styles.module.scss'
 import { v4 } from 'uuid'
 
-const DEFAULT_LIST = [
-  {
-    id: v4(),
-    name: 'item1',
-    idCompleted: false
-  },
-  {
-    id: v4(),
-    name: 'item2',
-    idCompleted: false
-  },
-  {
-    id: v4(),
-    name: 'item3',
-    idCompleted: false
-  },
-]
-
 function ReactBasic(props) {
-  const [arrTodoList, setArrTodoList] = useState(DEFAULT_LIST)
+  const [arrTodoList, setArrTodoList] = useState([])
   const [isDisabled, setIsDisabled] = useState(true)
   const [inputValue, setInputValue] = useState('');
+
+  useEffect(() => {
+    const storageList = localStorage.getItem('arrTodoList')
+
+    if (storageList) {
+      setArrTodoList(() => JSON.parse(storageList))
+    }
+  }, [])
+
+  useEffect(() => {
+    if (arrTodoList.length == 0) return
+
+    localStorage.setItem('arrTodoList', JSON.stringify(arrTodoList))
+  }, [arrTodoList])
 
   // Event handler to update input value state
   const handleInputChange = useCallback((event) => {

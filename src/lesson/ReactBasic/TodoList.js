@@ -7,7 +7,7 @@ function TodoList({ arrTodoList, onCheckBtnClick }) {
     <div className={styles.todo_list}>
       TodoList
 
-      {arrTodoList.map((todo, index) => {
+      {arrTodoList && arrTodoList.map((todo, index) => {
         return <Todo key={todo.id} todo={todo} onCheckBtnClick={onCheckBtnClick} />
       })}
     </div>

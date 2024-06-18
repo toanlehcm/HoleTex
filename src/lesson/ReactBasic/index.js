@@ -7,17 +7,17 @@ const DEFAULT_LIST = [
   {
     id: v4(),
     name: 'item1',
-    idCompleted: true
+    idCompleted: false
   },
   {
     id: v4(),
     name: 'item2',
-    idCompleted: true
+    idCompleted: false
   },
   {
     id: v4(),
     name: 'item3',
-    idCompleted: true
+    idCompleted: false
   },
 ]
 
@@ -43,7 +43,7 @@ function ReactBasic(props) {
   }, [inputValue, arrTodoList])
 
   const onCheckBtnClick = useCallback((id) => {
-    // setArrTodoList(prevState => prevState.map((todo) => todo.id === id ? { ...todo, idCompleted: true } : todo))
+    setArrTodoList((prevState) => prevState.map((todo) => todo.id === id ? { ...todo, idCompleted: true } : todo))
   }, [])
 
   return (

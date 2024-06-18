@@ -1,10 +1,10 @@
 import './App.css';
-import DependencyInversionPrinciple from './lesson/DependencyInversionPrinciple';
+import ReactBasic from './lesson/ReactBasic';
 
 function App() {
   return (
     <div className="App">
-      <DependencyInversionPrinciple />
+      <ReactBasic />
     </div>
   );
 }

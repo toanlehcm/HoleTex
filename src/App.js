@@ -1,10 +1,10 @@
 import './App.css';
-import CookiesLocalSession from './lesson/CookiesLocalSession';
+import Print60To0 from './lesson/Print60To0';
 
 function App() {
   return (
     <div className="App">
-      <CookiesLocalSession />
+      <Print60To0 />
     </div>
   );
 }

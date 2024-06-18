@@ -9,6 +9,27 @@
   align-items: center;
 }
 
-.button_item {
-  padding: 10px;
+.todo_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    .icon_check {
+      display: inline-block;
+    }
+  }
+
+  .button_item {
+    padding: 10px;
+  }
+
+  .icon_check {
+    display: none;
+  }
+
+  .text_decoration {
+    text-decoration: dashed;
+  }
 }

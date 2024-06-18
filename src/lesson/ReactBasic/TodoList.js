@@ -1,15 +1,14 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 import Todo from './Todo';
 import styles from './styles.module.scss'
 
-function TodoList({ arrTodoList }) {
-
+function TodoList({ arrTodoList, onCheckBtnClick }) {
   return (
     <div className={styles.todo_list}>
       TodoList
 
       {arrTodoList.map((todo, index) => {
-        return <Todo todo={todo} />
+        return <Todo key={todo.id} todo={todo} onCheckBtnClick={onCheckBtnClick} />
       })}
     </div>
   );

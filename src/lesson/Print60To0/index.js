@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Print60To0(props) {
+const getArrayNumber = () => {
+  const arrayLoop = []
+
   for (let index = 60; index >= 0; index--) {
     console.log(index);
+    arrayLoop.push(index)
   }
+
+  return arrayLoop
+}
+
+function Print60To0(props) {
+  const [arrayNumber, setArrayNumber] = useState(getArrayNumber())
 
   return (
     <div>
-      Print60To0
+      Print 60 To 0
+      <p>
+        {arrayNumber.map((item) => (<span>{item}, </span>))}
+      </p>
     </div>
   );
 }

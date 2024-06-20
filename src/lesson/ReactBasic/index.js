@@ -42,15 +42,30 @@ function ReactBasic(props) {
     setArrTodoList((prevState) => prevState.map((todo) => todo.id === id ? { ...todo, idCompleted: true } : todo))
   }, [])
 
+  function handleClick() {
+    console.log('Button clicked');
+  }
+
   return (
     <div >
-      <h3> Danh sách cần làm</h3>
+      {/* <button onClick={handleClick}>Click me</button> */}
 
-      <input name='add-todo' placeholder='Thêm việc cần làm...' value={inputValue} onChange={handleInputChange} />
+      {/* <button onClick={() => { handleClick(); alert('Clicked!'); }}>
+        Click me
+      </button> */}
 
-      <button className={styles.button_add} disabled={isDisabled} onClick={handleAddTodo}>Thêm</button>
+      {/* <button onClick={() => handleClick()}>Click me</button> */}
 
-      <TodoList arrTodoList={arrTodoList} onCheckBtnClick={onCheckBtnClick} />
+      <button onClick={handleClick()}>Click me</button>
+
+      {/* --------------- */}
+      {/* <h3> Danh sách cần làm</h3> */}
+
+      {/* <input name='add-todo' placeholder='Thêm việc cần làm...' value={inputValue} onChange={handleInputChange} /> */}
+
+      {/* <button className={styles.button_add} disabled={isDisabled} onClick={handleAddTodo}>Thêm</button> */}
+
+      {/* <TodoList arrTodoList={arrTodoList} onCheckBtnClick={onCheckBtnClick} /> */}
     </div>
   );
 }

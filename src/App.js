@@ -1,10 +1,10 @@
 import './App.css';
-import Print60To0 from './lesson/Print60To0';
+import LearnDeferredValue from './lesson/LearnDeferredValue';
 
 function App() {
   return (
     <div className="App">
-      <Print60To0 />
+      <LearnDeferredValue />
     </div>
   );
 }

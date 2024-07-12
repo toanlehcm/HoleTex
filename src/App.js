@@ -1,10 +1,10 @@
 import './App.css';
-import FunctionComponentsCannotGivenRefs from './lesson/MyResearch/FunctionComponentsCannotGivenRefs';
+import UseRefAfterClicked from './lesson/MyResearch/UseRefAfterClicked';
 
 function App() {
   return (
     <div className="App">
-      <FunctionComponentsCannotGivenRefs />
+      <UseRefAfterClicked />
     </div>
   );
 }

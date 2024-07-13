@@ -1,5 +1,5 @@
 import './App.css';
-import UseRefAfterClicked from './lesson/MyResearch/UseRefAfterClicked';
+import UseRefAfterClicked from './lesson/CodingExercises/UseRefAfterClicked';
 
 function App() {
   return (

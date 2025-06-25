@@ -8,6 +8,10 @@ function LearnUseCallback(props) {
     return fetch(`https://reqres.in/api/${type}`)
   }, [])
 
+  // const getData = (type) => {
+  //   return fetch(`https://reqres.in/api/${type}`)
+  // }
+
   const handleClick = () => {
 
     getData('user')

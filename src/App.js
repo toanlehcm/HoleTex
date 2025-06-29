@@ -1,8 +1,9 @@
 import "./App.css";
-import AutomaticBatching from "./containers/AutomaticBatching";
+// import AutomaticBatching from "./containers/AutomaticBatching";
+import WithUseTransition from "./containers/WithUseTransition";
 
 function App() {
-  return <AutomaticBatching />;
+  return <WithUseTransition />;
 }
 
 export default App;
